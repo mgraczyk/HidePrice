@@ -1,0 +1,29 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "Hide Amazon Price",
+  "version": "0.1",
+
+  // Recommended
+  "description": "Hide prices on amazon.com so that you can make more objective judgements about products.  Highlight the price text to see the price while shopping.",
+
+  "content_scripts": [{
+  	"matches": ["*://www.amazon.com/*", "https://www.amazon.com/*"],
+	"css": ["noprice.css"],
+	"run_at": "document_start"
+  }],
+
+  "page_action": {
+ 	"default_title": "Hide Amazon Price" 
+  },
+
+  "author": "Michael Graczyk",
+  "background": {
+    // Recommended
+    "persistent": false
+  },
+
+  "background": ""
+
+   // TODO: Add permissions
+}
